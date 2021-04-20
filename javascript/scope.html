@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Introduction to Scope</title>
+    </head>
+    <body>
+        <script>
+//            //global scope
+//            var fruit = "apple";
+//            console.log(fruit);
+//            
+//            function getFruit() {
+//                console.log(fruit); // fruit is accessible here
+//            }
+//            
+//            getFruit();
+            
+            // Functional Scope
+//            function greet() {
+//                var fruit = 'apple';
+//                console.log('inside function' , fruit);
+//            }
+//            greet();
+//            console.log(fruit); // error : fruit is not defined
+            
+            // Block Scope
+//            function greet() {
+//                if (true){
+//                    var f1 = 'apple'; // exist in sunction scope
+//                    const F2 = 'banana'; // exist in block scope
+//                    let f3 = 'strawberry'; // exist in block scope
+//                }
+//                console.log(f1);
+//                console.log(F2); //ERROR
+//                console.log(f3); //ERROR
+//            }
+//            greet();
+            
+            // Lexical Scope
+            
+            function outer(){
+                var f1 = 'apple';
+                const f2 = 'banana';
+                let f3 = 'strawberry';
+                
+                function inner() {
+                    console.log(f1);
+                    console.log(f2);
+                    console.log(f3);
+                }
+                inner();
+            }
+            outer();
+        </script>
+    </body>
+</html>

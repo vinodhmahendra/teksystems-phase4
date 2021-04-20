@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>ES6 Map Example</title>
+    </head>
+    
+    <body>
+        <script>
+            let vinodh = {name: 'vinodh'} , kumar = {name: 'kumar'} ,mahendra = {name: 'mahendra'};
+            
+            let userRoles = new Map();
+            
+            
+            //add elements to a map
+            userRoles.set(vinodh,'admin');
+            userRoles.set(kumar,'editor');
+            userRoles.set(mahendra,'subscriber');
+        
+        
+            console.log(userRoles.get(mahendra));
+             console.log(userRoles.has(mahendra));
+            console.log(userRoles.size);
+            
+        
+            for (let user of userRoles.keys()) {
+                console.log(user.name);
+            }
+            
+            for (let role of userRoles.values()) {
+                console.log(role);
+            }
+            
+            userRoles.forEach((role, user) =>
+                              console.log(`${user.name} : ${role}`)
+            );
+        </script>
+        
+        
+    </body>
+</html>

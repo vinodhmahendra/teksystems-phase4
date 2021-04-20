@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>let and const</title>
+    </head>
+    
+    <body>
+        <script>
+//         var dowork = function (flag) {
+//            if (flag) {
+//                var x = 3;
+//            }
+//            return x;
+//        };
+//        var result = dowork(true);
+//        console.log(result);
+            
+//        let x = 10;
+//        if (x == 10) {
+//            let x = 20;
+//            console.log(x); // 20
+//        }
+//        console.log(x); // 10
+            
+//        var a = 10;
+//        console.log(window.a);
+//            
+//        let b = 20;
+//        console.log(window.b); // not attached to global namespace (window)
+            
+//        for (var i = 0 ; i < 5 ; i++){
+//            setTimeout(function(){
+//                console.log(i);
+//            },1000);
+//        }
+        
+        //ES5    
+//        for (var i = 0 ; i < 5 ; i ++){
+//            (function (j){
+//                setTimeout(function () {
+//                    console.log(j);
+//                },1000);
+//            })(i);
+//        }
+            
+//        for (let i = 0 ; i < 5 ; i++){
+//            setTimeout(function(){
+//                console.log(i);
+//            },1000);
+//        }
+
+//        for (let i = 0 ; i < 5 ; i++){
+//            setTimeout(() => console.log(i),1000); // arrow function        
+//        }
+            
+//        let a = 10; // mutable
+//        a = 20;
+//        a = a + 5;
+//        console.log(a);
+        
+        const RATE = 0.1; // immutable
+     //   RATE = 10; Error : cannot reassign
+        console.log(RATE);
+        
+//        const RED; Missing initializer in const declaration
+            
+        </script>
+    </body>
+</html>

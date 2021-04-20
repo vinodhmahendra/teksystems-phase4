@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Immediately Invoke Function Expressions</title>
+    </head>
+    
+    <body>
+        <script>
+//            (function () {
+//                console.log('Executed!');
+//            })();
+            
+//            (function () {
+//                console.log('Executed!');
+//            }());
+//            
+//            (function(){
+//                var employeeName = 'vinodh';
+//            })();
+//            console.log(employeeName);
+            
+            var app = {};
+            (function (ns) {
+                ns.name = 'None';
+            })(app);
+            
+            console.log(app.name);
+        </script>
+    </body>
+</html>

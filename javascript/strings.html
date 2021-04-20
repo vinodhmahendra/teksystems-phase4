@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>The JavaScript String Object</title>
+    </head>
+    <body>
+        
+        <script>
+            
+            var username = new String("Simplilearn");
+            console.log(username);
+            console.log(" length " +username.length);
+            
+            console.log(" charAt (0) " + username.charAt(0));
+            console.log(" charAt (username.length-1) " + username.charAt(username.length-1));
+            
+            console.log(" charCodeAt (0) " + username.charCodeAt(0));
+            console.log(" charCodeAt (username.length-1) " + username.charCodeAt(username.length-1));
+            
+            var greeting = new String("Hello World! ");
+            var farewell = new String(" Bye! JavaScript");
+            
+            var output = greeting.concat(farewell);
+            console.log(" concat " +output);
+            
+            var re = /apples/gi;
+            var line = "Apples are round, and apples are juicy.";
+            if(line.search(re) == -1){
+                console.log("does not contain apples.")
+            }else{
+                console.log("contains apples.")
+            }
+            
+            var sliced = line.slice(3,-2);
+            console.log(sliced);
+            
+            console.log("starts with Apples :   " +line.startsWith('Apples'));
+            console.log("ends with juicy. :   " +line.endsWith('juicy.'));
+            
+            let email = 'vinodh.mahendra@pivotal.io';
+            console.log(" email.includes('@')  " +email.includes('@'));
+        </script>
+        
+    </body>
+</html>

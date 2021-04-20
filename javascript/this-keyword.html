@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <title>this keyword</title>
+    </head>
+    <body>
+        <script>
+            //console.log(typeof this); // object
+            
+            //console.log(this === window); //true
+            
+            //var name = 'vinodh';
+            //console.log(name); // vinodh
+            //console.log(this.name); //vinodh
+            
+//            var updateSalary = function (){
+//                console.log(this === window); // true
+//            };
+//            updateSalary();
+            
+//            var employee = {
+//                name: 'vinodh',
+//                updateSalary: function () {
+//                    console.log(this);
+//                }
+//            };
+//            employee.updateSalary();
+            
+//            var employee = {
+//                name: 'vinodh',
+//                updateSalary: function () {
+//                    var fn = function(){
+//                        console.log(this);
+//                    };
+//                    fn();
+//                }
+//            };
+//            employee.updateSalary();
+            
+//            var employee = {
+//                name: 'vinodh',
+//                updateSalary: function() {
+//                    var fn = function() {
+//                        console.log(this === window);
+//                    };
+//                    fn();
+//                }
+//            };
+//            employee.updateSalary();
+            //consturtor function
+//            var Address = function (line1){
+//                this.line1 = line1;
+//                console.log(this);
+//            }
+//            var addr  = new Address('123 State St.')
+            
+            var Address = function (line1){
+                this.line1 = line1;
+            };
+            Address.prototype.updateZipCode = function (){
+                console.log(this);
+            };
+            
+            var addr = new Address('123 State St.');
+            addr.updateZipCode();
+        </script>
+    </body>
+</html>

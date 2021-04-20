@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>constructor functions</title>
+    </head>
+    
+    <script>
+        //console.log(typeof Object); // function
+
+        // constructor function
+        var Employee = function (name){
+            this.name = name;
+            this.salary = 50000;
+        }
+        
+        Employee.prototype.giveRaise = function( raise){
+            this.salary += raise;
+        };
+//    
+//        var Employee = function (name, boss){
+//            this.name = name;
+//            this.boss = boss;
+//        }
+        
+        //var newEmployee = new Employee('Vinodh Mahendra');
+       // var newEmployee = new Employee('Vinodh Mahendra','Bhavya');
+        //console.log(typeof newEmployee); //object
+        //console.log(newEmployee.boss)
+        
+        var e1 = new Employee('Vinodh Mahendra');
+        var e2 = new Employee('Bhavya Keshavulu');
+//        console.log(e1 === e2); false
+       // console.log(e1.__proto__ ===  e2.__proto__); //true
+//        console.log(e1.giveRaise === e2.giveRaise); // false !PROBLEM 100, 000
+//        console.log(typeof Employee.prototype); //object
+       // console.log(Employee.prototype === Object.prototype); // false
+       // console.log(e1.giveRaise === e2.giveRaise); //true SOLVED 100,000
+        e1.giveRaise(1000000);
+        console.log(e1.salary);
+        console.log(e2.salary);
+    </script>
+</html>

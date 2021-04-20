@@ -1,0 +1,20 @@
+<html>
+    
+    <head>
+        <title>Function Expressions</title>
+    </head>
+    
+    <body>
+        <script>
+            //valid function expression 
+            var hireEmployee = function myHireEmployeeFn(name){
+                throw ('Error')
+            };
+           
+            //hireEmployee('Vinodh Mahendra') ; // invoke a  function
+            //console.log(typeof hireEmployee); // function
+            var action = hireEmployee;
+            action('Vinodh Mahendra');
+        </script>
+    </body>
+</html>
